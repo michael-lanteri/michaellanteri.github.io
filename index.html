@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>michael lanteri</title>
+            <meta charset="utf-8">
+        </head>
+        <body>
+            <div id="home">
+                <a href="./index.html">michael lanteri</a>
+            </div>
+            <div id="pages">
+                <a href="./about.html">About</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./research.html">Research</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+            <div id="homepage">
+            </div>
+            <div>
+                <p id="stars"></p>
+                <script>
+                    var str = "";
+                    var options = "∞☼°⋆*.°⋆*.";
+                    for(var i = 0; i < 5; i++)
+                    {
+                        idx = Math.floor(Math.random() * 10);
+                        
+                        //No two of the same character in a row
+                        while(i != 0 && options[idx] == str[i-1])
+                        {
+                            idx = Math.floor(Math.random() * 6);
+                        }
+                        
+                        str = str + options[idx];
+                    }
+                    document.getElementById("stars").innerHTML = str;
+                </script>
+            </div>
+        </body>
+    </html>
